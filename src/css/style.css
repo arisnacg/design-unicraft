@@ -9,9 +9,22 @@
 
  body {
    padding-bottom: 40px;
+   box-sizing: border-box;
  }
-
+/* [class*="col"]{
+  border: 1px solid black;
+} */
  /* Custom */
+
+.btn-primary {
+  background: #2d8aa7;
+  border-color: #2d8aa7;
+}
+
+.btn-primary:hover {
+  background: #21748d;
+  border-color: #21748d;
+}
 
 /* Navbar */
 .navbar {
@@ -40,25 +53,67 @@
   width: 100%;
   height: 280px;
   background-size: cover;
+  background-attachment
   background-position: center;
 }
 
 .overflow {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   background: rgba(0,0,0,.4);
+  overflow: hidden;
 }
 
 .overflow h4 {
   color: rgba(255, 255, 255, .8);
-  font-size: 26px;
+  font-size: 32px;
   text-align: center;
   max-width: 600px;
+  /* position: absolute;
+  top: 20%;
+  left: 30%; */
+  margin: 0 auto;
+  transform: translateY(120%);
+}
+.overflow p{
+  color: rgba(255, 255, 255, .8);
+  margin: 0 auto;
+  transform: translate(47.5%, 200%);
+}
+.overflow .buttonRead{
+  margin: 55px;
+  width: 180px;
+  height: 40px;
+  background-color: inherit;
+  color: rgba(255, 255, 255, .8);
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.overflow .buttonRead:hover{
+  background-color: rgba(255, 255, 255, .8);
+  color: #2b2b2b;
+}
+.card-content h4{
+  color: #21748d;
+  font-size: 18px;
+  padding: 2%;
+}
+.card-content h3{
+  color: #21748d;
+  font-size: 28px;
+  padding: 2%;
 }
 
+
+.card-content p{
+  color: #21748d;
+  padding: 2%;
+}
 /* Meet the Artist */
 .menu-top  {
   width: 100%;
@@ -127,7 +182,7 @@
   margin-top: 40px;
 }
 
-.other-video h1 {
+.other-video h3 {
   color: #21748d;
 }
 
@@ -190,5 +245,263 @@
   font-size: 12px;
 }
 
-/* Stories */
 
+.corousel-image{
+  height: 400px; 
+  width: 600px; 
+  background-image: url(../img/artist.jpg);
+}
+
+span{
+  display: block;
+}
+
+.corousel-image .corousel-text{
+  text-align: center;
+}
+
+.courosel-item{
+  color: #fff;
+}
+
+.courosel-item > h4{
+  font-weight: bold;
+}
+
+.btn-border-courosel{
+  display: block; 
+  margin: 0 auto;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 5px 20px;
+}
+
+.btn-border-courosel:hover{
+  display: block; 
+  margin: 0 auto;
+  color: #000;
+  background-color: rgba(255,255,255, 0.8);
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 5px 20px;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .text{
+  margin: 0 15px;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.overlay .text > p{
+  font-size: 10px;
+
+}
+
+.daftar-story {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.story-category .card{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+}
+
+.story-category .card-story{
+  background-size: cover;
+  background-position: center center; 
+  background-image: url(../img/artist.jpg);
+  margin: 0px;
+}
+/* search */
+.anchor a{
+  text-align: center;
+  margin:20px;
+  margin-top: 1%;
+}
+.active{
+  text-decoration: underline;
+}
+.card.artist{
+    transform: translateY(-20%);
+}
+
+.card-footer a{
+  margin:5px;
+}
+
+
+/* Image profile */
+
+.img-profile {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-profile .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  left: 40px;
+  top: -50%;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+@media screen and (max-width: 990px){
+  .img-profile .img {
+    position: relative;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -10%;
+  }
+
+  .artist h3 {
+    text-align: center;
+  }
+
+  .artist p {
+    padding: 0 20px !important;
+    text-align: justify;
+  }
+}
+
+/* Artist */
+.category li {
+  list-style: none;
+  display: inline-block;
+}
+
+.category li a {
+  display: block;
+  margin-right: 10px; 
+}
+
+.products {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.products .card {
+  width: 20%;
+  margin: 0 5px;
+  max-width: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-top-left-radius: 0; 
+  border-top-right-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.products .card .image {
+  height: 140px;
+}
+
+.products .card .card-title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.products .card .card-body span {
+  color: #888;
+  font-size: 16px;
+}
+
+.products .card .card-body p {
+  text-align: justify;
+  font-size: 12px;
+  color: #555;
+}
+
+.products .card .card-body .pemilik {
+  font-size: 14px;
+  display: block;
+}
+
+.products .card .btn {
+  background: #2d8aa7;
+  border-color: #2d8aa7;
+  border-radius: 0;
+}
+
+.products .card .btn i {
+  margin-right: 10px;
+}
+
+/* Blog */
+
+.blog {
+  margin-bottom: 
+}
+
+.blog .card-content {
+  padding: 15px;
+}
+
+.blog img {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blog .btn {
+  font-size: 18px;
+}
+
+.blog p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Pembayaran */
+
+.paket-kirim {
+  padding: 20px;
+}
+
+.paket-kirim .box {
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 40px 15px;
+  width: 100%;
+  max-width: 250px;
+  margin: 20px 5px 0;
+}
+
+.paket-kirim .box h5 {
+  text-align: center;
+}
+
+.paket-kirim .box p {
+  text-align: center;
+}
+
+.paket-kirim .box span {
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
